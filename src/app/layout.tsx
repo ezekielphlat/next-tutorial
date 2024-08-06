@@ -10,7 +10,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <header style={headerStyle}>
+        <h1>Sample Header</h1>
+        <p>This is a sample header with inline styling.</p>
+      </header>
+        {children}
+        
+        <footer style={footerStyle}>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+      </footer>
+      
+      </body>
     </html>
   )
 }
+
+const headerStyle = {
+  backgroundColor: '#333',
+  color: '#fff',
+  textAlign: 'center',
+  padding: '10px',
+};
+
+const footerStyle = {
+  backgroundColor: '#333',
+  color: '#fff',
+  textAlign: 'center',
+  padding: '10px',
+  position: 'fixed',
+  bottom: 0,
+  width: '100%',
+};
